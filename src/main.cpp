@@ -5,9 +5,11 @@ using namespace std;
 int main() {
 	int option;
 	char user, password;
+
 	cout<<"Seleccione la opcion que desee realizar:"<<endl;
 	cout<<"1.Login"<<endl;
 	cout<<"2.Salir"<<endl;
+
 	cin<<option;
 		if(option==1){
 			cout<<"Introduzca su usuario:"<<endl;
