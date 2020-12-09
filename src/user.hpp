@@ -13,6 +13,7 @@ public:
 	User(){
 
 	};
+  
 //	Setters
     inline void setUsername(string username){username_ = username;}
     inline void setPassword(string pass){pass_ = pass;}

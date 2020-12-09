@@ -3,7 +3,6 @@
 #include <iostream>
 #include <cstdlib>
 #include <fstream>
-
 bool loginPass(User aux, string nombreFichero){
 
 	ifstream archivo(nombreFichero);
@@ -35,11 +34,42 @@ bool loginPass(User aux, string nombreFichero){
 }
 
 void mostrarMenuAdmin(){
+        system("cls");        // Para limpiar la pantalla
+        // Texto del menú que se verá cada vez
         cout << "\n\nMenu de Opciones Admin" << endl;
         cout << "1. Registrar Espacio Natural" << endl;
-        cout << "2. Registrar Espacio Natural" << endl;
-        cout << "3. Registrar Monitor" << endl;
-        cout << "4. Salir del programa" << endl;
+        cout << "2. Mostrar EspacioNatural" << endl;
+        cout << "3. Registrar Espacio Natural" << endl;
+
+        cout << "\nIngrese una opcion: ";
+        cin >> opcion;
+
+        switch (opcion) {
+            case 1:
+                // Lista de instrucciones de la opción 1
+				cin >> aux;
+                }else{
+
+                }
+				cin.ignore();
+				cin.get();
+				break;
+            case 2:
+                // Lista de instrucciones de la opción 2
+				cin >> aux;
+                }else{
+
+                }
+				cin.ignore();
+				cin.get();
+				break;
+            case 3:
+                // Lista de instrucciones de la opción 3
+
+                break;
+        }
+    } while (opcion != 3);
+    return 0;
 }
 
 void mostrarMenuMonitor(){
