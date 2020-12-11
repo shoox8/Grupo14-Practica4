@@ -12,8 +12,8 @@ void Monitor::mostrarMonitor()
 		datoFich = f.get();
 		while (!f.eof())
 		{
-			cout << dato << endl;
-			dato = f.get();
+			cout << datoFich << endl;
+			datoFich = f.get();
 		}
 		f.close();
 	}
