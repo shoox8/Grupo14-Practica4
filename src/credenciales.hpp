@@ -49,7 +49,7 @@ void mostrarMenuAdmin(){
                 // Lista de instrucciones de la opción 1
 				cin >> aux;
                 }else{
-
+                
                 }
 				cin.ignore();
 				cin.get();
