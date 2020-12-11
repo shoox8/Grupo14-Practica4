@@ -48,46 +48,22 @@ class Monitor
 		}
 
 		//OBSERVADORES
-		string getNombre()
-		{
-			return _nombre;
-		}
+		inline string getNombre()const{return _nombre;}
 
-		string getDni()
-		{
-			return _dni;
-		}
+		inline string getDni()const{return _dni;}
 
-		int getTelefono()
-		{
-			return _telefono;
-		}
+		inline int getTelefono()const{return _telefono;}
 
-		float getRuta()
-		{
-			return _ruta;
-		}
+		inline float getRuta()const{return _ruta;}
 
 		//MODIFICADORES
-		void setNombre(string nombre)
-		{
-			_nombre = nombre;
-		}
+		inline void setNombre(string nombre){_nombre = nombre;}
 
-		void setDni(string dni)
-		{
-			_dni = dni;
-		}
+		inline void setDni(string dni){_dni = dni;}
 
-		void setTelefono(int telefono)
-		{
-			_telefono = telefono;
-		}
+		inline void setTelefono(int telefono){_telefono = telefono;}
 
-		void setRuta(string ruta)
-		{
-			_ruta = ruta;
-		}
+		inline void setRuta(string ruta){_ruta = ruta;}
 
 		//METODOS 
 
