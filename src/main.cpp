@@ -2,6 +2,7 @@
 #include <cstdlib>
 #include "user.hpp"
 #include "credenciales.hpp"
+#include "espacionat.hpp"
 
 using namespace std;
 

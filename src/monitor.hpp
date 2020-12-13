@@ -13,9 +13,9 @@ class Monitor
 
 		string _dni;
 
-		int telefono;
+		int _telefono;
 
-		string ruta;
+		string _ruta;
 
 	public:
 
@@ -26,7 +26,7 @@ class Monitor
 			_nombre = "";
 			_dni = "";
 			_telefono = 0;
-			_ruta = ruta;
+			_ruta = "";
 		}
 
 		//constructor parametrizado
@@ -54,7 +54,7 @@ class Monitor
 
 		inline int getTelefono()const{return _telefono;}
 
-		inline float getRuta()const{return _ruta;}
+		inline string getRuta()const{return _ruta;}
 
 		//MODIFICADORES
 		inline void setNombre(string nombre){_nombre = nombre;}
@@ -72,3 +72,5 @@ class Monitor
 		void mostrarMonitor();
 
 };
+
+#endif

@@ -7,7 +7,7 @@ using namespace std;
 
 class EspacioNat{
 private:
-	string nombre_,provincia_,logros_;
+	string _nombre,_provincia,_logros;
 public:
 
 	//constructor vacío
@@ -34,16 +34,16 @@ public:
 			this->_logros = m._logros;
 		}
 //	Setters
-    inline void setNombreEspNat(string nombre){nombre_ = nombre;}
-    inline void setProvincia(string provincia){provincia_ = provincia;}
-    inline void setLogros(string logros){logros_ = logros;}
+    inline void setNombreEspNat(string nombre){_nombre = nombre;}
+    inline void setProvincia(string provincia){_provincia = provincia;}
+    inline void setLogros(string logros){_logros = logros;}
 //	Getters
-    inline string getNombreEspNat()const{return nombre_;}
-    inline string getProvincia()const{return provincia_;}
-    inline string getLogros()const{return logros_;}
+    inline string getNombreEspNat()const{return _nombre;}
+    inline string getProvincia()const{return _provincia;}
+    inline string getLogros()const{return _logros;}
 };
 
-
+void registrarEspacioNat(string nombreFichero);
 
 
 #endif

@@ -1,4 +1,6 @@
 #include "espacionat.hpp"
+#include <fstream>
+
 
 void registrarEspacioNat(string nombreFichero){
     EspacioNat aux;
@@ -10,7 +12,7 @@ void registrarEspacioNat(string nombreFichero){
     cin >> nombre;
     aux.setNombreEspNat(nombre);
 
-    cout << "Introduce el nombre del Espacio Natural: " << endl;
+    cout << "Introduce la provincia del Espacio Natural: " << endl;
     cin >> provincia;
     aux.setNombreEspNat(provincia);
 
@@ -19,9 +21,14 @@ void registrarEspacioNat(string nombreFichero){
     aux.setNombreEspNat(logros);
 
 
-    ifstream archivo(nombreFichero);
+
+    fstream archivo;
+    archivo.open(nombreFichero,fstream::app);
+
 	if(!archivo.is_open()){
 		cout<<"Error al abrir el fichero de admin.txt"<<endl;
 	}
 
+    archivo<<nombre<<"\t"<<provincia<<"\t"<<logros<<endl;
+    archivo.close();
 }

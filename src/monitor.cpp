@@ -1,5 +1,5 @@
 #include "monitor.hpp"
-
+#include <fstream>
 void Monitor::mostrarMonitor()
 {	
 	ifstream f;
@@ -27,13 +27,13 @@ void Monitor::mostrarMonitor()
 void registrarMonitor(string nombre, string dni, int telefono, string ruta)
 {
 	cout << "Introduza el nombre del monitor que desea registrar" << endl;
-	cin >> _nombre;
+	cin >> nombre;
 	cout << "Introduzca el dni del monitor" << endl;
-	cin >> _dni;
+	cin >> dni;
 	cout << "Introduzca el teléfono del monitor" << endl;
-	cin >> _telefono;
+	cin >> telefono;
 	cout << "Introduzca la ruta que se le ha asociado al monitor" << endl;
-	cin >> _ruta;
+	cin >> ruta;
 
 	ofstream f;
 	f.open("monitor.txt");
@@ -41,7 +41,7 @@ void registrarMonitor(string nombre, string dni, int telefono, string ruta)
 		cout << "Error al abrir fichero monitor" << endl;
 	else
 	{
-		f << _nombre << " " << _dni << " " << _telefono << " " << _ruta << endl;
+		f << nombre << " " << dni << " " << telefono << " " << ruta << endl;
 		f.close();
 	}
 }
