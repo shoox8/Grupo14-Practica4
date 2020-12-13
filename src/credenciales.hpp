@@ -34,6 +34,7 @@ bool loginPass(User aux, string nombreFichero){
 }
 
 void mostrarMenuAdmin(){
+    do{
         system("cls");        // Para limpiar la pantalla
         // Texto del menú que se verá cada vez
         cout << "\n\nMenu de Opciones Admin" << endl;
@@ -47,30 +48,24 @@ void mostrarMenuAdmin(){
         switch (opcion) {
             case 1:
                 // Lista de instrucciones de la opción 1
-				cin >> aux;
-                }else{
-                
-                }
+
 				cin.ignore();
 				cin.get();
 				break;
             case 2:
-                // Lista de instrucciones de la opción 2
 				cin >> aux;
-                }else{
-
+                mostrarMenuMonitor();
+                else{
+                    cout << "" << endl;
                 }
 				cin.ignore();
 				cin.get();
 				break;
             case 3:
-                // Lista de instrucciones de la opción 3
-
                 break;
         }
     } while (opcion != 3);
     return 0;
-}
 
 void mostrarMenuMonitor(){
         cout << "\n\nMenu de Opciones Monitor" << endl;
