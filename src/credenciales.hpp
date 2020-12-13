@@ -6,6 +6,7 @@
 #include "espacionat.hpp"
 #include "sendero.hpp"
 #include "monitor.hpp"
+Monitor m;
 
 bool loginPass(User aux, string nombreFichero){
 
@@ -76,13 +77,13 @@ void mostrarMenuAdmin(){
 		cin >> telefono;
 		cout << "Introduzca la ruta que se le ha asociado al monitor" << endl;
 		cin >> ruta;
-
-		Monitor m;
 		
 		m.registrarMonitor(nombre, dni, telefono, ruta);
 		
                 break;
             case 4:
+			
+		m.mostrarMonitor();
             
                 break;
             case 5:
