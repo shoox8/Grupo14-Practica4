@@ -32,3 +32,25 @@ void registrarEspacioNat(string nombreFichero){
     archivo<<nombre<<"\t"<<provincia<<"\t"<<logros<<endl;
     archivo.close();
 }
+
+void mostrarEspacioNat(string nombreFichero){
+    ifstream archivo(nombreFichero);
+	if(!archivo.is_open()){
+		cout<<"Error al abrir el fichero de admin.txt"<<endl;
+	}
+
+	string nombre;
+	string provincia;
+    string logros;
+
+    	cout<< "| Nombre | \t | Provincia | \t | Logros |" <<endl;
+    while (!archivo.eof()) {
+		archivo>>nombre;
+		archivo>>provincia;
+        archivo>>logros;
+		cout << "|" <<nombre << "| \t |" << provincia << "| \t |" << logros << "|"<< endl;
+        archivo.ignore();
+	}
+	archivo.close(); //Cerramos el archivo.
+
+}

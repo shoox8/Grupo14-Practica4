@@ -44,6 +44,6 @@ public:
 };
 
 void registrarEspacioNat(string nombreFichero);
-
+void mostrarEspacioNat(string nombreFichero);
 
 #endif

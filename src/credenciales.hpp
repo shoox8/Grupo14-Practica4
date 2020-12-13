@@ -57,6 +57,7 @@ void mostrarMenuAdmin(){
 				cin.get();
 				break;
             case 2:
+                mostrarEspacioNat("espacionat.txt");
 				cin.ignore();
 				cin.get();
 				break;
