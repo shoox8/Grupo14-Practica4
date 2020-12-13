@@ -1,0 +1,4 @@
+Sendero 1	Cazorla	Disponible	4
+Sendero 2	Cazorla	Disponible	3
+Sendero 3	Doñana	En Reformas	5
+Sendero 4	Sierra1	Disponible	2
