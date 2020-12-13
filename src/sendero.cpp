@@ -1,12 +1,12 @@
 #include "sendero.hpp"
 #include <fstream>
 
-
 void registrarSendero(string nombreFichero){
     Sendero aux;
     string nombre;
     string espacionatural;
     int rutas;
+    string estado;
 
     cout << "Introduce el nombre del Sendero: " << endl;
     cin >> nombre;
@@ -18,7 +18,7 @@ void registrarSendero(string nombreFichero){
     cin >> estado;
 
     cout << "Introduce el numero de rutas que tiene el sendero: " << endl;
-    cin >> r;
+    cin >> rutas;
 
 
     fstream archivo;
@@ -28,7 +28,7 @@ void registrarSendero(string nombreFichero){
 		cout<<"Error al abrir el fichero de sendero.txt"<<endl;
 	}
 
-    archivo<<nombre<<"\t"<<espacionatural<<"\t"<<rutas<<endl;
+    archivo<<nombre<<"\t"<<espacionatural<<"\t"<<estado<<"\t"<<rutas<<endl;
     archivo.close();
 }
 
@@ -40,14 +40,14 @@ void mostrarSendero(string nombreFichero){
 
 	string nombre;
 	string espacionatural;
-	string sendero;
+	string estado;
     int rutas;
 
-    	cout<< "| Nombre | \t | EspacioNatural | \t | Sendero | \t | Rutas |" <<endl;
+    	cout<< "| Nombre | \t | EspacioNatural | \t | Estado | \t | Rutas |" <<endl;
     while (!archivo.eof()) {
 		archivo>>nombre;
 		archivo>>espacionatural;
-		archivo>>sendero;
+		archivo>>estado;
         archivo>>rutas;
 		cout << "|" <<nombre << "| \t |" << espacionatural << "| \t |" << estado << "| \t |"<< rutas << " |" <<endl;
         archivo.ignore();

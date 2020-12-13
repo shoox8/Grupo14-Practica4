@@ -22,7 +22,7 @@ class Sendero{
 			Sendero(string nombre, string espacionatural, string estado, int rutas){
 				nombre_=nombre;
 				espacionatural_=espacionatural;
-				estaddo_=estado;
+				estado_=estado;
 				rutas_=rutas;
 			}
 
@@ -46,8 +46,9 @@ class Sendero{
 		    inline string getEstado()const{return estado_;}
 		    inline int getRutas()const{return rutas_;}
 
-		void registrarSendero(string nombreFichero);
-		void mostrarSendero(string nombreFichero);
 };
+
+void registrarSendero(string nombreFichero);
+void mostrarSendero(string nombreFichero);
 
 #endif
