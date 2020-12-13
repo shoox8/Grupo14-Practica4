@@ -45,7 +45,8 @@ void mostrarMenuAdmin(){
         cout << "2. Mostrar EspacioNatural" << endl;
         cout << "3. Registrar Monitor" << endl;
         cout << "4. Mostrar monitores" << endl;
-
+        cout << "5. Registrar Monitor" << endl;
+        cout << "6. Mostrar monitores" << endl;
         cout << "\nIngrese una opcion: ";
         cin >> opcion;
 
