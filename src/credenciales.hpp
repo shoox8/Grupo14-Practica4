@@ -4,6 +4,7 @@
 #include <cstdlib>
 #include <fstream>
 #include "espacionat.hpp"
+#include "sendero.hpp"
 
 bool loginPass(User aux, string nombreFichero){
 
@@ -45,8 +46,8 @@ void mostrarMenuAdmin(){
         cout << "2. Mostrar EspacioNatural" << endl;
         cout << "3. Registrar Monitor" << endl;
         cout << "4. Mostrar monitores" << endl;
-        cout << "5. Registrar Monitor" << endl;
-        cout << "6. Mostrar monitores" << endl;
+        cout << "5. Registrar Sendero" << endl;
+        cout << "6. Mostrar senderos" << endl;
         cout << "\nIngrese una opcion: ";
         cin >> opcion;
 
@@ -67,11 +68,21 @@ void mostrarMenuAdmin(){
             case 4:
             
                 break;
+            case 5:
+                registrarSendero("sendero.txt");
+            	cin.ignore();
+            	cin.get();
+            	break;
+             case 6:
+                mostrarSendero("sendero.txt");
+          		cin.ignore();
+            	cin.get();
+            	break;
             default:
             cout << "Marque una opción correcta" <<endl;
             break;
         }
-    } while (opcion != 3);
+    } while (opcion != 6);
 }
 
 void mostrarMenuMonitor(){
