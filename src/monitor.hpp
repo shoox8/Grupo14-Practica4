@@ -67,7 +67,7 @@ class Monitor
 
 		//METODOS 
 
-		void registrarMonitor(string nombre, int edad, string dni);
+		void registrarMonitor(string nombre, string dni, int telefono, string ruta);
 
 		void mostrarMonitor();
 
