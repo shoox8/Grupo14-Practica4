@@ -5,6 +5,7 @@
 #include <fstream>
 #include "espacionat.hpp"
 #include "sendero.hpp"
+#include "monitor.hpp"
 
 bool loginPass(User aux, string nombreFichero){
 
