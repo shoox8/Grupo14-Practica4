@@ -1,1 +1,3 @@
-lolo 31027890A 989209384 3
+Evaristo	1	1	1	q
+Almuncio	2	2	2	w
+Bernardo	3	3	3	e
