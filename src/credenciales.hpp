@@ -70,19 +70,8 @@ void mostrarMenuAdmin(){
 				break;
             case 3:
 		        {
-                 string nombre, dni, ruta;
-		        int telefono;
-
-		        cout << "Introduza el nombre del monitor que desea registrar" << endl;
-		        cin >> nombre;
-		        cout << "Introduzca el dni del monitor" << endl;
-		        cin >> dni;
-		        cout << "Introduzca el teléfono del monitor" << endl;
-		        cin >> telefono;
-		        cout << "Introduzca la ruta que se le ha asociado al monitor" << endl;
-		        cin >> ruta;
 		
-		        m.registrarMonitor(nombre, dni, telefono, ruta);
+		        m.registrarMonitor("monitor.txt");
 		
             }
                 break;
