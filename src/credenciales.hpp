@@ -1,3 +1,4 @@
+
 #ifndef credenciales_H
 #define credenciales_H
 #include <iostream>
@@ -6,6 +7,7 @@
 #include "espacionat.hpp"
 #include "sendero.hpp"
 #include "monitor.hpp"
+#include "ruta.hpp"
 Monitor m;
 
 bool loginPass(User aux, string nombreFichero){
@@ -50,6 +52,7 @@ void mostrarMenuAdmin(){
         cout << "4. Mostrar monitores" << endl;
         cout << "5. Registrar Sendero" << endl;
         cout << "6. Mostrar senderos" << endl;
+        cout << "7. Salir del programa" << endl;
         cout << "\nIngrese una opcion: ";
         cin >> opcion;
 
@@ -66,24 +69,24 @@ void mostrarMenuAdmin(){
 				cin.get();
 				break;
             case 3:
-		string nombre, dni, ruta;
-		int telefono;
+		        string nombre, dni, ruta;
+		        int telefono;
 
-		cout << "Introduza el nombre del monitor que desea registrar" << endl;
-		cin >> nombre;
-		cout << "Introduzca el dni del monitor" << endl;
-		cin >> dni;
-		cout << "Introduzca el teléfono del monitor" << endl;
-		cin >> telefono;
-		cout << "Introduzca la ruta que se le ha asociado al monitor" << endl;
-		cin >> ruta;
+		        cout << "Introduza el nombre del monitor que desea registrar" << endl;
+		        cin >> nombre;
+		        cout << "Introduzca el dni del monitor" << endl;
+		        cin >> dni;
+		        cout << "Introduzca el teléfono del monitor" << endl;
+		        cin >> telefono;
+		        cout << "Introduzca la ruta que se le ha asociado al monitor" << endl;
+		        cin >> ruta;
 		
-		m.registrarMonitor(nombre, dni, telefono, ruta);
+		        m.registrarMonitor(nombre, dni, telefono, ruta);
 		
                 break;
             case 4:
 			
-		m.mostrarMonitor();
+	        	m.mostrarMonitor();
             
                 break;
             case 5:
@@ -91,7 +94,7 @@ void mostrarMenuAdmin(){
             	cin.ignore();
             	cin.get();
             	break;
-             case 6:
+            case 6:
                 mostrarSendero("sendero.txt");
           		cin.ignore();
             	cin.get();
@@ -100,13 +103,37 @@ void mostrarMenuAdmin(){
             cout << "Marque una opción correcta" <<endl;
             break;
         }
-    } while (opcion != 6);
+    } while (opcion != 7);
 }
 
 void mostrarMenuMonitor(){
+     int opcion;
+     do{
         cout << "\n\nMenu de Opciones Monitor" << endl;
-        cout << "1. Programar Ruta" << endl;
-        cout << "2. Registrar Ruta" << endl;
+        cout << "1. Registrar Ruta" << endl;
+        cout << "2. Mostrar Ruta" << endl;
         cout << "3. Salir del Programa" << endl;
+
+        cout<<"\nIngrese una opcion";
+        cin>>opcion;
+        switch (opcion)
+        {
+        case 1:
+            RegistrarRuta("ruta.txt");
+            cin.ignore();
+            cin.get();
+            break;
+        
+        case 2:
+            MostrarRuta("ruta.txt");
+            cin.ignore();
+            cin.get();
+            break;
+        
+        default:
+            cout<<"Marque una opcion correcta"<<endl;
+            break;
+        }
+     }while(opcion!=3);
 }
 #endif
