@@ -11,6 +11,8 @@ class Monitor
 
 		string _nombre;
 
+		string _pass;
+
 		string _dni;
 
 		int _telefono;
@@ -24,15 +26,17 @@ class Monitor
 		Monitor()
 		{
 			_nombre = "";
+			_pass = "";
 			_dni = "";
 			_telefono = 0;
 			_ruta = "";
 		}
 
 		//constructor parametrizado
-		Monitor(string nombre, string dni, int telefono, string ruta)
+		Monitor(string nombre, string pass, string dni, int telefono, string ruta)
 		{
 			_nombre = nombre;
+			_pass = pass;
 			_dni = dni;
 			_telefono = telefono;
 			_ruta = ruta;
@@ -42,6 +46,7 @@ class Monitor
 		Monitor(const Monitor &m)
 		{
 			this->_nombre = m._nombre;
+			this->_pass = m._pass;
 			this->_dni = m._dni;
 			this->_telefono = m._telefono;
 			this->_ruta = m._ruta;
@@ -49,6 +54,8 @@ class Monitor
 
 		//OBSERVADORES
 		inline string getNombre()const{return _nombre;}
+
+		inline string getPass()const{return _pass;}
 
 		inline string getDni()const{return _dni;}
 
@@ -59,6 +66,8 @@ class Monitor
 		//MODIFICADORES
 		inline void setNombre(string nombre){_nombre = nombre;}
 
+		inline void setPass(string pass){_nombre = pass;}
+
 		inline void setDni(string dni){_dni = dni;}
 
 		inline void setTelefono(int telefono){_telefono = telefono;}
@@ -67,7 +76,7 @@ class Monitor
 
 		//METODOS 
 
-		void registrarMonitor(string nombre, string dni, int telefono, string ruta);
+		void registrarMonitor(string nombreFichero);
 
 		void mostrarMonitor();
 
