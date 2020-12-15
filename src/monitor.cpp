@@ -21,6 +21,7 @@ void Monitor::mostrarMonitor()
 		archivo>>dni;
         archivo>>telefono;
         archivo>>ruta;
+	if (archivo.eof()) break;
 		cout << "|" <<nombre << "| \t |" <<pass << "| \t |" << dni << "| \t |" << telefono << "| \t |" << ruta << "|"<< endl;
         archivo.ignore();
 	}
