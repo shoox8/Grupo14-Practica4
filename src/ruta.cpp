@@ -53,6 +53,9 @@ void MostrarRuta(string nFichero){
     string estado;
     int duracion;
     float longitud;
+
+    cout << "|Nombre| \t |Tipo| \t |Direccion| \t |Localidad| \t |Id_ruta| \t |Estado| \t |Duracion| \t |Longitud|" <<endl;
+    
     while (!archivo.eof()){
         archivo>>nombre;
         archivo>>tipo;
