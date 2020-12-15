@@ -63,6 +63,7 @@ class Ruta{
 
 void RegistrarRuta(string nFichero);
 void MostrarRuta(string nFichero);
+void MostrarRutaMantenimiento(string nFichero);
 
 
 #endif
