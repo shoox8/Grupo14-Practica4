@@ -8,6 +8,7 @@ using namespace std;
 class EspacioNat{
 private:
 	string _nombre,_provincia,_logros;
+	int _maxSenderos;
 public:
 
 	//constructor vacío
@@ -16,6 +17,7 @@ public:
 			_nombre = "";
 			_provincia = "";
 			_logros = "";
+			_maxSenderos= 4;
 		}
 
 		//constructor parametrizado
@@ -24,14 +26,16 @@ public:
 			_nombre = nombre;
 			_provincia = provincia;
 			_logros = logros;
+			_maxSenderos = 4;
 		}
 
 		//Constructor de copia
 		EspacioNat(const EspacioNat &m)
 		{
-			this->_nombre = m._nombre;
-			this->_provincia = m._provincia;
-			this->_logros = m._logros;
+			this->_nombre = m.getNombreEspNat();
+			this->_provincia = m.getProvincia();
+			this->_logros = m.getLogros();
+			this->_maxSenderos= 4;
 		}
 //	Setters
     inline void setNombreEspNat(string nombre){_nombre = nombre;}

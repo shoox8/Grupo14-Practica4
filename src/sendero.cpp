@@ -11,8 +11,11 @@ void registrarSendero(string nombreFichero){
     cout << "Introduce el nombre del Sendero: " << endl;
     cin >> nombre;
 
-    cout << "Introduce el Espacio Natural donde se encuentre el Sendero: " << endl;
-    cin >> espacionatural;
+    do{
+        cout << "Introduce el Espacio Natural donde se encuentre el Sendero: " << endl;
+        cin >> espacionatural;
+    } while (isValidEspacioNat("espacionat.txt",espacionatural));
+    
 
     cout << "Introduce el estado del Sendero: " << endl;
     cin >> estado;
@@ -54,4 +57,12 @@ void mostrarSendero(string nombreFichero){
 	}
 	archivo.close(); //Cerramos el archivo.
 
+}
+
+bool isValidEspacioNat(string nombreFichero, string espacioNat ){
+    ifstream archivo(nombreFichero);
+	if(!archivo.is_open()){
+		cout<<"Error al abrir el fichero de sendero.txt"<<endl;
+	}
+    
 }

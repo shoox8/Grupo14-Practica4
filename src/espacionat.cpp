@@ -48,7 +48,6 @@ void mostrarEspacioNat(string nombreFichero){
 		archivo>>provincia;
         archivo>>logros;
 
-
 		cout << "|" <<nombre << "| \t |" << provincia << "| \t |" << logros << "|"<< endl;
 
 	}
