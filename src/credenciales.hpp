@@ -104,7 +104,8 @@ void mostrarMenuMonitor(){
         cout << "\n\nMenu de Opciones Monitor" << endl;
         cout << "1. Registrar Ruta" << endl;
         cout << "2. Mostrar Ruta" << endl;
-        cout << "3. Salir del Programa" << endl;
+        cout << "3. Mostrar Rutas en Mantenimiento" << endl;
+        cout << "4. Salir del programa" <<endl;
 
         cout<<"\nIngrese una opcion";
         cin>>opcion;
@@ -121,6 +122,12 @@ void mostrarMenuMonitor(){
             cin.ignore();
             cin.get();
             break;
+	
+	case 3:
+	    MostrarRutaMantenimiento("ruta.txt");
+	    cin.ignore();
+	    cin.get();
+	    break;		
         
         default:
             cout<<"Marque una opcion correcta"<<endl;
