@@ -7,10 +7,21 @@ using namespace std;
 
 class Ruta{
     private:
-        string _nombre, _tipo, _direccion, _localidad;
-        int _id_ruta, _estado, _duracion;
+        string _nombre, _tipo, _direccion, _localidad, _estado;
+        int _id_ruta, _duracion;
         float _longitud; 
     public:
+        Ruta(){
+            _nombre = "";
+            _tipo = "";
+            _direccion = "";
+            _localidad = "";
+            _id_ruta = 0;
+            _estado = "";
+            _duracion = 0;
+            _longitud = 0;
+        }
+
         Ruta(string nombre, string tipo, string direccion, string localidad, int id_ruta, int estado, int duracion, float longitud){
             _nombre = nombre;
             _tipo = tipo;
@@ -36,7 +47,7 @@ class Ruta{
         inline void setDireccionRuta(string direccion){_direccion = direccion;}
         inline void setLocalidadRuta(string localidad){_localidad = localidad;}
         inline void setID_Ruta(int id_ruta){_id_ruta = id_ruta;}
-        inline void setEstadoRuta(int estado){_estado = estado;}
+        inline void setEstadoRuta(string estado){_estado = estado;}
         inline void setDuracionRuta(int duracion){_duracion = duracion;}
         inline void setLongitudRuta(float longitud){_longitud = longitud;}
 
@@ -45,7 +56,7 @@ class Ruta{
         inline string getDireccionRuta()const{return _direccion;}
         inline string getLocalidadRuta()const{return _localidad;}
         inline int getID_Ruta()const{return _id_ruta;}
-        inline int getEstadoRuta()const{return _estado;}
+        inline string getEstadoRuta()const{return _estado;}
         inline int getDuracionRuta()const{return _duracion;}
         inline float getLongitudRuta()const{return _longitud;}
 };
