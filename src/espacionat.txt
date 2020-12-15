@@ -3,4 +3,6 @@ Dona-Ana	Sevilla		Premio-Infantil
 Sierra1	Soria	Campeona1
 Sierra2		Burgos		Logros
 Prueba	Barcelona	Logro1
-
+Espacionat1	Cordoba	Logros2
+EspacioNat1	Cordoba	CampeonesDuMundo
+EspacioNat2	Jaen	logoros

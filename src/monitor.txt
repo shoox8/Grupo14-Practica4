@@ -1,3 +1,5 @@
 Evaristo	1	1	1	q
 Almuncio	2	2	2	w
 Bernardo	3	3	3	e
+lolo	123	1203948981K	465883900	4
+pepe	pepe	190302930K	1122334456	9

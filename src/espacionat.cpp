@@ -3,7 +3,7 @@
 
 
 void registrarEspacioNat(string nombreFichero){
-    EspacioNat aux;
+
     string nombre;
     string provincia;
     string logros;
@@ -28,7 +28,7 @@ void registrarEspacioNat(string nombreFichero){
 		cout<<"Error al abrir el fichero de espacionat.txt"<<endl;
 	}
 
-    archivo<<nombre<<"\t"<<provincia<<"\t"<<logros<<endl;
+    archivo<< endl <<nombre<<"\t"<<provincia<<"\t"<<logros;
     archivo.close();
 }
 
@@ -42,13 +42,15 @@ void mostrarEspacioNat(string nombreFichero){
 	string provincia;
     string logros;
 
-    	cout<< "| Nombre | \t | Provincia | \t | Logros |" <<endl;
+    cout<< "| Nombre | \t | Provincia | \t | Logros |" <<endl;
     while (!archivo.eof()) {
 		archivo>>nombre;
 		archivo>>provincia;
         archivo>>logros;
+
+
 		cout << "|" <<nombre << "| \t |" << provincia << "| \t |" << logros << "|"<< endl;
-        archivo.ignore();
+
 	}
 	archivo.close(); //Cerramos el archivo.
 
