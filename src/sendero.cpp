@@ -33,6 +33,7 @@ void registrarSendero(string nombreFichero){
 
     archivo<<nombre<<"\t"<<espacionatural<<"\t"<<estado<<"\t"<<rutas<<endl;
     archivo.close();
+
 }
 
 void mostrarSendero(string nombreFichero){
