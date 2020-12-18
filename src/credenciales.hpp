@@ -8,7 +8,7 @@
 #include "sendero.hpp"
 #include "monitor.hpp"
 #include "ruta.hpp"
-Monitor m;
+
 
 bool loginPass(User aux, string nombreFichero){
 
@@ -69,11 +69,17 @@ void mostrarMenuAdmin(){
 				cin.get();
 				break;
             case 3:
+<<<<<<< HEAD
 		        {
 		
 		        m.registrarMonitor("../Grupo14-Practica4/src/monitor.txt");
 		
             }
+=======
+	        Monitor m;
+                m.pedirMonitor();
+		m.registrarMonitor("monitor.txt");
+>>>>>>> 5fab8129215674a798d136750a29743917aedc37
                 break;
             case 4:
 			    m.mostrarMonitor();

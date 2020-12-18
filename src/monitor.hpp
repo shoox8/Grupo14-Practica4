@@ -79,6 +79,12 @@ class Monitor
 		void registrarMonitor(string nombreFichero);
 
 		void mostrarMonitor();
+		
+		void pedirMonitor();
+	
+		bool monitorUnico(string id);
+
+		bool rutaValida(string ruta);
 
 };
 
