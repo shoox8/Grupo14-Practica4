@@ -81,6 +81,10 @@ class Monitor
 		void mostrarMonitor();
 		
 		void pedirMonitor();
+	
+		bool monitorUnico(string id);
+
+		bool rutaValida(string ruta);
 
 };
 
