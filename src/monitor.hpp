@@ -79,6 +79,8 @@ class Monitor
 		void registrarMonitor(string nombreFichero);
 
 		void mostrarMonitor();
+		
+		void pedirMonitor();
 
 };
 
