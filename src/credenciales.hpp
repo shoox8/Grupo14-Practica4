@@ -59,19 +59,19 @@ void mostrarMenuAdmin(){
         switch (opcion) {
             case 1:
                 // Lista de instrucciones de la opción 1
-                registrarEspacioNat("espacionat.txt");
+                registrarEspacioNat("../Grupo14-Practica4/src/espacionat.txt");
 				cin.ignore();
 				cin.get();
 				break;
             case 2:
-                mostrarEspacioNat("espacionat.txt");
+                mostrarEspacioNat("../Grupo14-Practica4/src/espacionat.txt");
 				cin.ignore();
 				cin.get();
 				break;
             case 3:
 		        {
 		
-		        m.registrarMonitor("monitor.txt");
+		        m.registrarMonitor("../Grupo14-Practica4/src/monitor.txt");
 		
             }
                 break;
@@ -82,12 +82,12 @@ void mostrarMenuAdmin(){
 
                 break;
             case 5:
-                registrarSendero("sendero.txt");
+                registrarSendero("../Grupo14-Practica4/src/sendero.txt");
             	cin.ignore();
             	cin.get();
             	break;
             case 6:
-                mostrarSendero("sendero.txt");
+                mostrarSendero("../Grupo14-Practica4/src/sendero.txt");
           		cin.ignore();
             	cin.get();
             	break;
@@ -112,19 +112,19 @@ void mostrarMenuMonitor(){
         switch (opcion)
         {
         case 1:
-            RegistrarRuta("ruta.txt");
+            RegistrarRuta("../Grupo14-Practica4/src/ruta.txt");
             cin.ignore();
             cin.get();
             break;
         
         case 2:
-            MostrarRuta("ruta.txt");
+            MostrarRuta("../Grupo14-Practica4/src/ruta.txt");
             cin.ignore();
             cin.get();
             break;
 	
 	case 3:
-	    MostrarRutaMantenimiento("ruta.txt");
+	    MostrarRutaMantenimiento("../Grupo14-Practica4/src/ruta.txt");
 	    cin.ignore();
 	    cin.get();
 	    break;		

@@ -14,7 +14,7 @@ void registrarSendero(string nombreFichero){
     do{
         cout << "Introduce el Espacio Natural donde se encuentre el Sendero: " << endl;
         cin >> espacionatural;
-    } while (isValidEspacioNat("espacionat.txt",espacionatural));
+    } while (!isValidEspacioNat(nombreFichero, espacionatural));
     
 
     cout << "Introduce el estado del Sendero: " << endl;
@@ -65,5 +65,31 @@ bool isValidEspacioNat(string nombreFichero, string espacioNat ){
 	if(!archivo.is_open()){
 		cout<<"Error al abrir el fichero de sendero.txt"<<endl;
 	}
-    
+
+		string nombre;
+		string espacionatural;
+		string estado;
+	    int rutas;
+	    int maxContEspacioNat = 0;
+
+	    while (!archivo.eof()) {
+			archivo>>nombre;
+			archivo>>espacionatural;
+			archivo>>estado;
+	        archivo>>rutas;
+
+	        if(espacionatural == espacioNat)
+	        	maxContEspacioNat++;
+
+	        if (maxContEspacioNat > 4) {
+	        	cout << "No se puede registrar un sendero en este espacio natural" << endl;
+	        	return false;
+	        }
+
+	        archivo.ignore();
+		}
+
+		archivo.close();
+
+		return true;
 }

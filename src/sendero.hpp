@@ -50,5 +50,6 @@ class Sendero{
 
 void registrarSendero(string nombreFichero);
 void mostrarSendero(string nombreFichero);
+bool isValidEspacioNat(string nombreFichero, string espacioNat);
 
 #endif
